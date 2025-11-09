@@ -36,27 +36,46 @@ $(document).ready(function() {
 
 function ikon(opt) {
     var ikon = "";
-    if (opt.indexOf("Ø§Ù†Ø³ØªØ¬Ø±Ø§Ù…") >= 0) {
+    var optLower = (opt || "").toLowerCase();
+    
+    // Instagram - دعم النصوص العربية والإنجليزية والنصوص المشوهة
+    if (optLower.indexOf("instagram") >= 0 || opt.indexOf("انستجرام") >= 0 || opt.indexOf("Ø§Ù†Ø³ØªØ¬Ø±Ø§Ù…") >= 0) {
         ikon = "<span class=\"ico-ig\"><i class=\"fab fa-instagram\" aria-hidden=\"true\"></i> </span>";
-    } else if (opt.indexOf("ÙƒÙ„ÙˆØ¨ Ù‡Ø§ÙˆØ³") >= 0) {
+    } 
+    // Clubhouse
+    else if (optLower.indexOf("clubhouse") >= 0 || opt.indexOf("كلوب هاوس") >= 0 || opt.indexOf("ÙƒÙ„ÙˆØ¨ Ù‡Ø§ÙˆØ³") >= 0) {
         ikon = "<span class=\"ico-web\"><i class=\"fas fa-club\" aria-hidden=\"true\"></i> </span>"; 
-  } else if (opt.indexOf("ÙˆØ§ØªØ³Ø§Ø¨") >= 0) {
+    }
+    // WhatsApp
+    else if (optLower.indexOf("whatsapp") >= 0 || opt.indexOf("واتساب") >= 0 || opt.indexOf("ÙˆØ§ØªØ³Ø§Ø¨") >= 0) {
         ikon = "<span class=\"ico-whatsapp\"><i class=\"fab fa-whatsapp\" aria-hidden=\"true\"></i> </span>";
-    } else if (opt.indexOf("Ø¬Ø±Ø§Ø¦Ø¯") >= 0) {
+    }
+    // Newspapers/Websites
+    else if (optLower.indexOf("جرائد") >= 0 || optLower.indexOf("website") >= 0 || opt.indexOf("Ø¬Ø±Ø§Ø¦Ø¯") >= 0) {
         ikon = "<span class=\"ico-whatsapp\"><i class=\"fas fa-globe\" aria-hidden=\"true\"></i> </span>";
-    }  else if (opt.indexOf("Canva Bro ") >= 0) {
+    }
+    // Canva
+    else if (optLower.indexOf("canva") >= 0 || opt.indexOf("Canva Bro ") >= 0) {
       ikon = "<span class=\"ico-favorite\"><i class=\"fas fa-star\" aria-hidden=\"true\"></i> </span>";
     } else if (opt.indexOf("ÙÙŠØ³Ø¨ÙˆÙƒ") >= 0) {
         ikon = "<span class=\"ico-fb\"><i class=\"fab fa-facebook\" aria-hidden=\"true\"></i> </span>";
     } else if (opt.indexOf("ÙŠÙˆØªÙŠÙˆØ¨") >= 0) {
         ikon = "<span class=\"ico-yt\"><i class=\"fab fa-youtube\" aria-hidden=\"true\"></i> </span>";
-    } else if (opt.indexOf("Ø¨ÙŠÙ‡Ø§Ù†Ø³") >= 0) {
+    }
+    // Behance
+    else if (optLower.indexOf("behance") >= 0 || opt.indexOf("بيهانس") >= 0 || opt.indexOf("Ø¨ÙŠÙ‡Ø§Ù†Ø³") >= 0) {
         ikon = "<span class=\"ico-yt\"><i class=\"fab fa-behance\" aria-hidden=\"true\"></i> </span>";
-    } else if (opt.indexOf("ØªÙˆÙŠØªØ±") >= 0) {
+    }
+    // Twitter
+    else if (optLower.indexOf("twitter") >= 0 || opt.indexOf("تويتر") >= 0 || opt.indexOf("ØªÙˆÙŠØªØ±") >= 0) {
         ikon = "<span class=\"ico-tw\"><i class=\"fab fa-twitter\" aria-hidden=\"true\"></i> </span>";
-     } else if (opt.indexOf("Ø«Ø±ÙŠØ¯Ø²") >= 0) {
+    }
+    // Threads
+    else if (optLower.indexOf("threads") >= 0 || opt.indexOf("ثريدز") >= 0 || opt.indexOf("Ø«Ø±ÙŠØ¯Ø²") >= 0) {
         ikon = "<span class=\"ico-tw\"><i class=\"far fa-at\" aria-hidden=\"true\"></i> </span>";
-    } else if (opt.indexOf("ÙƒÙˆØ§ÙŠ") >= 0) {
+    }
+    // Quora
+    else if (optLower.indexOf("quora") >= 0 || opt.indexOf("كورا") >= 0 || opt.indexOf("ÙƒÙˆØ§ÙŠ") >= 0) {
         ikon = "<span class=\"ico-gp\"><i class=\"fas fa-video\" aria-hidden=\"true\"></i> </span>";
     } else if (opt.indexOf("Ø³Ø§ÙˆÙ†Ø¯ Ú©Ù„Ø§ÙˆØ¯") >= 0) {
         ikon = "<span class=\"ico-sc\"><i class=\"fab fa-soundcloud\" aria-hidden=\"true\"></i> </span>";
